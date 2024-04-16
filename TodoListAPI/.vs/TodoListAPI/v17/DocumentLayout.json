@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F90B8324-8E29-4EBF-AF2A-AD5733FB97BB}|Infrastructure\\Infrastructure.csproj|c:\\users\\mateu\\desktop\\todolist\\todolistapi\\infrastructure\\data persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F90B8324-8E29-4EBF-AF2A-AD5733FB97BB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89711B47-A9F1-4EC7-9EB6-1671F1DC1395}|TodoListAPI\\TodoListAPI.csproj|c:\\users\\mateu\\desktop\\todolist\\todolistapi\\todolistapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89711B47-A9F1-4EC7-9EB6-1671F1DC1395}|TodoListAPI\\TodoListAPI.csproj|solutionrelative:todolistapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FC002FBC-BE36-4E0F-8C65-FB21AC58A905}|Domain\\Domain.csproj|c:\\users\\mateu\\desktop\\todolist\\todolistapi\\domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC002FBC-BE36-4E0F-8C65-FB21AC58A905}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F90B8324-8E29-4EBF-AF2A-AD5733FB97BB}|Infrastructure\\Infrastructure.csproj|c:\\users\\mateu\\desktop\\todolist\\todolistapi\\infrastructure\\data persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F90B8324-8E29-4EBF-AF2A-AD5733FB97BB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data persistance\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89711B47-A9F1-4EC7-9EB6-1671F1DC1395}|TodoListAPI\\TodoListAPI.csproj|c:\\users\\mateu\\desktop\\todolist\\todolistapi\\todolistapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -58,23 +58,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\Domain\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\AppUser.cs",
@@ -82,8 +74,7 @@
               "RelativeToolTip": "Domain\\Entities\\AppUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T19:43:42.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T19:43:42.414Z"
             },
             {
               "$type": "Document",
@@ -95,8 +86,7 @@
               "RelativeToolTip": "Domain\\Models\\Requests\\UpdateTodoRequestModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T18:55:00.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:55:00.032Z"
             },
             {
               "$type": "Document",
@@ -108,8 +98,7 @@
               "RelativeToolTip": "Domain\\Models\\Requests\\CreateTodoRequestModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T18:54:11.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:54:11.699Z"
             },
             {
               "$type": "Document",
@@ -121,12 +110,11 @@
               "RelativeToolTip": "Application\\Services\\Interfaces\\ITodoService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T18:49:46.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:49:46.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Todo.cs",
               "DocumentMoniker": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\Domain\\Entities\\Todo.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Todo.cs",
@@ -134,21 +122,19 @@
               "RelativeToolTip": "Domain\\Entities\\Todo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T18:49:17.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:49:17.096Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "TodoListAPI",
+              "Title": "TodoListAPI.csproj",
               "DocumentMoniker": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\TodoListAPI\\TodoListAPI.csproj",
               "RelativeDocumentMoniker": "TodoListAPI\\TodoListAPI.csproj",
               "ToolTip": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\TodoListAPI\\TodoListAPI.csproj",
               "RelativeToolTip": "TodoListAPI\\TodoListAPI.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-16T18:19:42.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:19:42.94Z"
             },
             {
               "$type": "Document",
@@ -160,12 +146,11 @@
               "RelativeToolTip": "TodoListAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-16T17:57:42.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:57:42.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\Infrastructure\\Data Persistance\\DataContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data Persistance\\DataContext.cs",
@@ -186,12 +171,11 @@
               "RelativeToolTip": "TodoListAPI\\serilog-configuration.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-16T17:40:52.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:40:52.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mateu\\Desktop\\TodoList\\TodoListAPI\\TodoListAPI\\Program.cs",
               "RelativeDocumentMoniker": "TodoListAPI\\Program.cs",
@@ -212,8 +196,7 @@
               "RelativeToolTip": "TodoListAPI\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T17:00:39.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:00:39.624Z"
             },
             {
               "$type": "Document",
@@ -225,8 +208,15 @@
               "RelativeToolTip": "TodoListAPI\\WeatherForecast.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T17:00:37.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T17:00:37.426Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
