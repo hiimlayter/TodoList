@@ -1,0 +1,11 @@
+﻿TodoListAPI/TodoListAPI/bin
+TodoListAPI/TodoListAPI/obj
+TodoListAPI/TodoListAPI/Infrastructure/obj
+TodoListAPI/logs
+TodoListAPI/Infrastructure/obj
+TodoListAPI/Infrastructure/bin
+TodoListAPI/Domain/obj
+TodoListAPI/Domain/bin
+TodoListAPI/Application/obj
+TodoListAPI/Application/bin
+TodoListAPI/.vs

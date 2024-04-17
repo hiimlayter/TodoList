@@ -5,16 +5,16 @@ namespace Application.Services.Interfaces
 {
     public interface ITodoService
     {
-        Task<IEnumerable<Todo>> GetAllTasksAsync();
+        Task<IEnumerable<Todo>> GetAllTodosAsync();
 
-        Task<IEnumerable<Todo>> GetUserTasksAsync(string userId);
+        Task<IEnumerable<Todo>> GetUserTodosAsync(string userId);
 
-        Task<Todo> GetTodoByIdAsync(string userId);
+        Task<Todo> GetTodoByIdAsync(int todoID);
 
-        Task<bool> DeleteTaskAsync(int taskID);
+        Task<bool> DeleteTodoAsync(int todoID);
 
-        Task<Todo> CreateTaskAsync(CreateTodoRequestModel taskModel);
+        Task<Todo> CreateTodoAsync(CreateTodoRequestModel todoModel);
 
-        Task<Todo> UpdateTaskAsync(UpdateTodoRequestModel taskModel);
+        Task<Todo> UpdateTodoAsync(UpdateTodoRequestModel todoModel);
     }
 }
