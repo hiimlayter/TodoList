@@ -1,20 +1,20 @@
-﻿using Domain.Entities;
+﻿using Domain.Models.Dto;
 using Domain.Models.Requests;
 
 namespace Application.Services.Interfaces
 {
     public interface ITodoService
     {
-        Task<IEnumerable<Todo>> GetAllTodosAsync();
+        Task<TodoDto> CreateTodoAsync(string userId, CreateTodoRequestModel todoModel);
 
-        Task<IEnumerable<Todo>> GetUserTodosAsync(string userId);
+        Task<IEnumerable<TodoDto>> GetAllTodosAsync();
 
-        Task<Todo> GetTodoByIdAsync(int todoID);
+        Task<IEnumerable<TodoDto>> GetUserTodosAsync(string userId);
 
-        Task<bool> DeleteTodoAsync(int todoID);
+        Task<TodoDto> GetTodoByIdAsync(string userId, int todoId);
 
-        Task<Todo> CreateTodoAsync(CreateTodoRequestModel todoModel);
+        Task<TodoDto> UpdateTodoAsync(string userId, int todoId, CreateTodoRequestModel todoModel);
 
-        Task<Todo> UpdateTodoAsync(UpdateTodoRequestModel todoModel);
+        Task<bool> DeleteTodoAsync(string userId, int todoId);
     }
 }

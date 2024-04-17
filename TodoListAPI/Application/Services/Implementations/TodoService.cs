@@ -1,39 +1,112 @@
 ﻿using Application.Services.Interfaces;
 using Domain.Entities;
+using Domain.Models.Dto;
 using Domain.Models.Requests;
+using Infrastructure.Data_Persistance;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Services.Implementations
 {
     public class TodoService : ITodoService
     {
-        public Task<Todo> CreateTodoAsync(CreateTodoRequestModel todoModel)
+        private readonly UserManager<AppUser> _userManager;
+        private readonly ILogger<TodoService> _logger;
+        private readonly DataContext _dataContext;
+
+        public TodoService(UserManager<AppUser> userManager, ILogger<TodoService> logger, DataContext dataContext)
         {
-            throw new NotImplementedException();
+            _userManager = userManager;
+            _logger = logger;
+            _dataContext = dataContext;
         }
 
-        public Task<bool> DeleteTodoAsync(int todoID)
+        public async Task<TodoDto> CreateTodoAsync(string userId, CreateTodoRequestModel todoModel)
         {
-            throw new NotImplementedException();
+            var todo = new Todo
+            {
+                Title = todoModel.Title,
+                Description = todoModel.Description,
+                IsDone = todoModel.IsDone,
+                Date = todoModel.Date,
+                UserId = userId,
+            };
+
+            await _dataContext.Todo.AddAsync(todo);
+            await _dataContext.SaveChangesAsync();
+
+            return new TodoDto(todo);
         }
 
-        public Task<IEnumerable<Todo>> GetAllTodosAsync()
+        public async Task<IEnumerable<TodoDto>> GetAllTodosAsync()
         {
-            throw new NotImplementedException();
+            var todosList = await _dataContext.Todo.ToListAsync();
+
+            return todosList.ConvertAll(x => new TodoDto(x));
         }
 
-        public Task<Todo> GetTodoByIdAsync(int todoID)
+        public async Task<TodoDto> GetTodoByIdAsync(string userId, int todoId)
         {
-            throw new NotImplementedException();
+            var todo = await GetTodoFromDatabaseById(todoId);
+
+            CheckIfUserIsAllowedToPerformActions(todo, userId);
+
+            return new TodoDto(todo);
         }
 
-        public Task<IEnumerable<Todo>> GetUserTodosAsync(string userId)
+        public async Task<IEnumerable<TodoDto>> GetUserTodosAsync(string userId)
         {
-            throw new NotImplementedException();
+            var todosList = await _dataContext.Todo.Where(x => x.UserId == userId).ToListAsync();
+
+            return todosList.ConvertAll(x => new TodoDto(x));
         }
 
-        public Task<Todo> UpdateTodoAsync(UpdateTodoRequestModel todoModel)
+        public async Task<TodoDto> UpdateTodoAsync(string userId, int todoId, CreateTodoRequestModel todoModel)
         {
-            throw new NotImplementedException();
+            var todo = await GetTodoFromDatabaseById(todoId);
+
+            CheckIfUserIsAllowedToPerformActions(todo, userId);
+
+            todo.Title = todoModel.Title;
+            todo.Description = todoModel.Description;
+            todo.Date = todoModel.Date;
+            todo.IsDone = todoModel.IsDone;
+
+            await _dataContext.SaveChangesAsync();
+
+            return new TodoDto(todo);
+        }
+
+        public async Task<bool> DeleteTodoAsync(string userId, int todoId)
+        {
+            var todo = await GetTodoFromDatabaseById(todoId);
+
+            CheckIfUserIsAllowedToPerformActions(todo, userId);
+
+            return true;
+        }
+
+        //Helpers
+
+        private async Task<Todo> GetTodoFromDatabaseById(int todoId)
+        {
+            var todo = await _dataContext.Todo.FindAsync(todoId);
+
+            if (todo == null)
+            {
+                throw new KeyNotFoundException("Todo with specified ID does not exist");
+            }
+
+            return todo;
+        }
+
+        private void CheckIfUserIsAllowedToPerformActions(Todo todo, string userId)
+        {
+            if (todo.UserId != userId)
+            {
+                throw new UnauthorizedAccessException("This user us not allowed to edit given item");
+            }
         }
     }
 }

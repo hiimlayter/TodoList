@@ -13,7 +13,7 @@ namespace Domain.Entities
 
         public string Description { get; set; } = string.Empty;
         public DateTime Date { get; set; }
-        public int Status { get; set; }
+        public bool IsDone { get; set; }
         public string UserId { get; set; }
 
         //Navigation Properties

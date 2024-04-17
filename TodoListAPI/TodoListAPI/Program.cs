@@ -36,6 +36,7 @@ builder.Services.AddDefaultIdentity<AppUser>(options =>
 
 //Services
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ITodoService, TodoService>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
