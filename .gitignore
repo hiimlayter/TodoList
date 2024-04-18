@@ -9,3 +9,6 @@ TodoListAPI/Domain/bin
 TodoListAPI/Application/obj
 TodoListAPI/Application/bin
 TodoListAPI/.vs
+TodoListApp/.vscode
+TodoListAPI/TodoListAPI/sqlite.db-shm
+TodoListAPI/TodoListAPI/sqlite.db-wal

@@ -1,0 +1,16 @@
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  app-day {
+    flex: 0 0 auto;
+  }
+
+  *{
+    width: auto;
+    background-color: transparent;
+  }
