@@ -20,6 +20,20 @@ var logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
+var MyAllowSpecificOrigins = "AllowAngularOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:4200")
+            .AllowCredentials()
+            .AllowAnyHeader()
+            .WithMethods("GET", "POST", "PUT", "DELETE");
+        });
+});
+
 //Identity + Database
 
 builder.Services.AddControllers();
@@ -60,6 +74,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseRouting();
+
+app.UseCors("AllowAngularOrigins");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

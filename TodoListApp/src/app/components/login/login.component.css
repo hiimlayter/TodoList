@@ -1,16 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-body {
-	background: #2c2c2c;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	margin: -20px 0 50px;
-}
-
 h1 {
 	font-weight: bold;
 	margin: 0;

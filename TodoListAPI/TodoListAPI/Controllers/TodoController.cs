@@ -1,6 +1,7 @@
 ﻿using Application.Services.Interfaces;
 using Domain.Models.Dto;
 using Domain.Models.Requests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
@@ -18,7 +19,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route(""), Authorize]
         [ProducesResponseType(typeof(List<TodoDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetTodos()
@@ -34,7 +35,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{todoId:int}")]
+        [Route("{todoId:int}"), Authorize]
         [ProducesResponseType(typeof(TodoDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -62,7 +63,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpGet]
-        [Route("user")]
+        [Route("user"), Authorize]
         [ProducesResponseType(typeof(TodoDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -86,7 +87,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("{todoId:int}")]
+        [Route("{todoId:int}"), Authorize]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -119,7 +120,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpPost]
-        [Route("create")]
+        [Route("create"), Authorize]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -148,7 +149,7 @@ namespace TodoListAPI.Controllers
         }
 
         [HttpPut]
-        [Route("{todoId}")]
+        [Route("{todoId}"), Authorize]
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

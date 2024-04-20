@@ -7,8 +7,7 @@ namespace Domain.Models.Requests
         [Required(AllowEmptyStrings = false, ErrorMessage = "Todo has no title")]
         public string Title { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Todo has to have Description")]
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         public bool IsDone { get; set; }
         public DateTime Date { get; set; }

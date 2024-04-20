@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { AccountService } from '../../services/account/account.service';
+import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +10,29 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
 
+export class HeaderComponent implements OnInit{
+
+  email: string = '';
+
+  ngOnInit(){
+    this.email = AccountService.email;
+  }
+
+  constructor(private accountService: AccountService, private router: Router) 
+  {
+  }
+
+  public signOut(){
+    this.accountService.logout().subscribe({
+      next: () => {
+        this.accountService.clearLoggedUser();
+        this.accountService.isLoggedIn = false;
+        this.router.navigate(['/login']);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error(error);
+      },
+    });
+  }
 }

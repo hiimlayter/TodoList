@@ -1,9 +1,9 @@
 <form class="form-inline" action="/action_page.php">
     <label for="title">Tytuł:</label>
-    <input type="text" placeholder="Tytuł" name="title">
+    <input type="text" placeholder="Tytuł" [(ngModel)]="todoObj.Title" name="title" required>
     <label for="desc">Opis:</label>
-    <input type="text" placeholder="Opis" name="desc">
+    <input type="text" placeholder="Opis" [(ngModel)]="todoObj.Description" name="description">
     <label for="date">Data:</label>
-    <input type="date" name="date">
-    <button type="submit">Dodaj</button>
+    <input type="date" [(ngModel)]="todoObj.Date" name="date">
+    <button type="button" (click)="addTodo()">Dodaj</button>
   </form>
