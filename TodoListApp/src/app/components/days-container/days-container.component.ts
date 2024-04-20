@@ -19,6 +19,18 @@ export class DaysContainerComponent implements OnInit{
   constructor(private todoService: TodoService){}
 
   ngOnInit(): void {
+    this.todoService.refreshNeeded$.subscribe(() => {
+      this.getTodos();
+    });
+
+    this.getTodos();
+  }
+
+  getTodoItemsByDate(date: string): Todo[] {
+    return this.todoList.filter(todo => todo.Date.split('T')[0] == date)
+  }
+
+  getTodos(){
     this.todoService.getTodos().subscribe({
       next: (response) => {
         this.todoList = response
@@ -31,9 +43,5 @@ export class DaysContainerComponent implements OnInit{
       error: () => {
       },
     });
-  }
-
-  getTodoItemsByDate(date: string): Todo[] {
-    return this.todoList.filter(todo => todo.Date.split('T')[0] == date)
   }
 }
