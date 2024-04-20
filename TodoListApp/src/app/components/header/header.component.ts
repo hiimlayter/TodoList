@@ -26,12 +26,11 @@ export class HeaderComponent implements OnInit{
   public signOut(){
     this.accountService.logout().subscribe({
       next: () => {
-        this.accountService.clearLoggedUser();
+        AccountService.email = '';
         this.accountService.isLoggedIn = false;
         this.router.navigate(['/login']);
       },
-      error: (error: HttpErrorResponse) => {
-        console.error(error);
+      error: () => {
       },
     });
   }

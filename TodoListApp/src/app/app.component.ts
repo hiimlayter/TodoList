@@ -16,8 +16,8 @@ export class Todo{
   Title: string;
   Description: string;
   IsDone: boolean;
-  Date: Date;
-  constructor(title: string, description: string, date: Date, isDone: boolean = true){
+  Date: string;
+  constructor(title: string, description: string, date: string, isDone: boolean = true){
     this.Title = title;
     this.Description = description;
     this.IsDone = isDone;

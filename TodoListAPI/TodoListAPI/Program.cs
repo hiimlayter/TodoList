@@ -63,9 +63,10 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.Name = "TodoListAppCookie";
     options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromDays(14);
-    options.LoginPath = "/api/Account/Login";
+    options.LoginPath = "/api/account/Login";
+    options.Cookie.SameSite = SameSiteMode.None;
     options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(14);
 });
 
 var app = builder.Build();

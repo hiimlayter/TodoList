@@ -1,4 +1,6 @@
 <div class="day">
-    <h2>Dzień X</h2>
-    <app-todo-item></app-todo-item>
+    <h2>{{date}}</h2>
+    <ng-container *ngFor="let todo of todoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </ng-container>
 </div>

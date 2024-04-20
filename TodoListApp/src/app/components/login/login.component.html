@@ -10,6 +10,7 @@
             <input type="password" placeholder="Powtórz hasło" [(ngModel)]="registerObj.ConfirmPassword" name="regRepPassword" required/>
 			<button (click)="Register()">Zarejestruj</button>
 		</form>
+		<p>{{errorMessageRegister}}</p>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#">
@@ -18,6 +19,7 @@
 			<input type="password" placeholder="Hasło" [(ngModel)]="logInObj.Password" name="password" required/>
 			<button (click)="LogIn()" type="button" >Zaloguj</button>
 		</form>
+		<p>{{errorMessageLogin}}</p>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">

@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ApiService } from '../api/api.service';
+import { LoginResponse } from '../../interfaces/login-response';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,27 +17,17 @@ export class AccountService {
     AccountService.email = incommingParameter;
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
-  baseUrl = 'https://localhost:7218/api/account/';
-
-  login(body: any): Observable<any>{
-    return this.httpClient.post(`${this.baseUrl}login`, body);
+  public login(body: any): any{
+    return this.apiService.login(body);
   }
 
-  logout(): Observable<any>{
-    return this.httpClient.post(`${this.baseUrl}logout`, null);
+  public register(body: any): any{
+    return this.apiService.register(body);
   }
 
-  register(body: any): Observable<any>{
-    return this.httpClient.post(`${this.baseUrl}register`, body);
-  }
-
-  setLoggedUser(body: any){
-    AccountService.email = body.Email;
-  }
-
-  clearLoggedUser(){
-    AccountService.email = "";
+  public logout(): any{
+    return this.apiService.logout();
   }
 }

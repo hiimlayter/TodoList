@@ -21,44 +21,13 @@ export class AddTodoFormComponent {
 
   public addTodo(){
     this.todoService.addTodo(this.todoObj).subscribe({
-      next: () => {
+      next: (response) => {
         //ADD TODO TO LIST
-        console.log("Todo added");
+        console.log(Response);
       },
       error: (error: HttpErrorResponse) => {
-        console.error(error.message);
-      },
-    });
-
-    this.todoService.editTodo(this.todoObj, 2).subscribe({
-      next: () => {
-        //ADD TODO TO LIST
-        console.log("Todo edited");
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error(error.message);
-      },
-    });
-
-    this.todoService.getUserTodo().subscribe({
-      next: () => {
-        //ADD TODO TO LIST
-        console.log("Todo fetched");
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error(error.message);
-      },
-    });
-
-    this.todoService.deleteTodo(2).subscribe({
-      next: () => {
-        //ADD TODO TO LIST
-        console.log("Todo deleted");
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error(error.message);
+        console.error(error);
       },
     });
   }
-
 }

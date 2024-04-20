@@ -1,10 +1,6 @@
 <app-toolbar></app-toolbar>
 <div class="scrolling-wrapper-flexbox" id="scrollbar-horizontal">
-  <app-day></app-day>
-  <app-day></app-day>
-  <app-day></app-day>
-  <app-day></app-day>
-  <app-day></app-day>
-  <app-day></app-day>
-  <app-day></app-day>
+  <ng-container *ngFor="let date of dates">
+    <app-day [date]="date" [todoList]="getTodoItemsByDate(date)"></app-day>
+  </ng-container>
 </div>

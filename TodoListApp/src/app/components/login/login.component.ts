@@ -1,5 +1,5 @@
 import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,38 +13,47 @@ import { AccountService } from '../../services/account/account.service';
   styleUrl: './login.component.css'
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
   logInObj: Login;
   registerObj: Register;
 
+  errorMessageLogin: string;
+  errorMessageRegister: string;
+
   constructor(private elementRef: ElementRef<HTMLElement>, private accountService: AccountService, private router: Router) { 
     this.logInObj = new Login();
     this.registerObj = new Register();
+    this.errorMessageLogin = "";
+    this.errorMessageRegister = "";
   }
+
+  ngOnInit(): void {
+  }
+
   public LogIn(){
     this.accountService.login(this.logInObj).subscribe({
       next: () => {
         this.accountService.isLoggedIn = true;
-        this.accountService.setLoggedUser(this.logInObj);
+        AccountService.email = this.logInObj.Email;
         this.router.navigate(['/dashboard']);
       },
-      error: (error: HttpErrorResponse) => {
-        console.error(error);
-      },
+      error: () => {
+        this.errorMessageLogin = "Błąd";
+      }
     });
   }
 
   public Register(){
     this.accountService.register(this.registerObj).subscribe({
-      next: (data: any) => {
+      next: () => {
         this.accountService.isLoggedIn = true;
-        this.accountService.setLoggedUser(this.registerObj);
+        AccountService.email = this.registerObj.Email;
         this.router.navigate(['/dashboard']);
       },
-      error: (error: HttpErrorResponse) => {
-        console.error(error);
-      },
+      error: () => {
+        this.errorMessageLogin = "Błąd";
+      }
     });
   }
 
