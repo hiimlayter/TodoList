@@ -84,6 +84,9 @@ namespace Application.Services.Implementations
 
             CheckIfUserIsAllowedToPerformActions(todo, userId);
 
+            _dataContext.Todo.Remove(todo);
+            await _dataContext.SaveChangesAsync();
+
             return true;
         }
 
