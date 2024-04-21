@@ -4,12 +4,11 @@ import { HeaderComponent } from '../header/header.component';
 import { AddTodoFormComponent } from '../add-todo-form/add-todo-form.component';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [DaysContainerComponent, HeaderComponent, AddTodoFormComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.css',
+    imports: [DaysContainerComponent, HeaderComponent, AddTodoFormComponent]
 })
 export class DashboardComponent {
-
 }

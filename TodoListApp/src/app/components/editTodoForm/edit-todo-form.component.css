@@ -6,16 +6,8 @@
     flex-flow: row wrap;
     align-items: center;
   }
-
-p {
-    margin: 0;
-    font-size: 20px;
-    font-style: bold;
-    color: white;
-    margin: 5px 10px 5px 0;
-}
-
-.form-inline label {
+  
+  .form-inline label {
     font-style: bold;
     color: white;
     margin: 5px 10px 5px 0;
@@ -28,6 +20,19 @@ p {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
+  }
+  
+  .form-inline button {
+    background: -webkit-linear-gradient(to right, #752bff, #d941ff);
+	background: linear-gradient(to right, #752bff, #d941ff);
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
   }
 
   *{

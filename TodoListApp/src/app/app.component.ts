@@ -13,11 +13,13 @@ export class AppComponent {
 }
 
 export class Todo{
+  Id: number;
   Title: string;
   Description: string;
   IsDone: boolean;
   Date: string;
-  constructor(title: string, description: string, date: string, isDone: boolean = true){
+  constructor(id: number, title: string, description: string, date: string, isDone: boolean = true){
+    this.Id = id;
     this.Title = title;
     this.Description = description;
     this.IsDone = isDone;

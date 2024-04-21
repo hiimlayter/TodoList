@@ -1,11 +1,11 @@
 <div class="todoItem">
     <div class="todoItem-buttons">
-        <button id="editButton">o</button>
-        <button id="deleteButton">x</button>
+        <button id="editButton" (click)="edit()">o</button>
+        <button id="deleteButton" (click)="delete()">x</button>
     </div>
     <div class="todoItem-info">
-        <h4>{{todo?.Title}}</h4>
-        <p>{{todo?.Description}}</p>
+        <h4>{{todo.Title}}</h4>
+        <p>{{todo.Description}}</p>
     </div>
-    <input type="checkbox" [checked]="todo?.IsDone"/>
+    <input type="checkbox" (change)="changeTodoStatus()" [checked]="todo.IsDone"/>
 </div>
