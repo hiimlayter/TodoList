@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/055a6dc6-754c-4125-8d59-36efaad3c42b/resourceGroups/TodoListApp/providers/Microsoft.Web/sites/MBTodoListAPP",
+    "appService.deploySubpath": "TodoListApp\\dist\\todo-list-app\\browser"
+}

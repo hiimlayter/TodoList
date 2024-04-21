@@ -10,8 +10,8 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  baseAccountUrl = 'https://localhost:7218/api/account/';
-  baseTodoUrl = 'https://localhost:7218/api/todo/';
+  baseAccountUrl = 'http://mbtodolistapi.azurewebsites.net/api/account/';
+  baseTodoUrl = 'http://mbtodolistapi.azurewebsites.net/api/todo/';
 
   login(body: any): Observable<any>{
     return this.httpClient.post(`${this.baseAccountUrl}login`, body);

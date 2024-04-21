@@ -12,3 +12,9 @@ TodoListAPI/.vs
 TodoListApp/.vscode
 TodoListAPI/TodoListAPI/sqlite.db-shm
 TodoListAPI/TodoListAPI/sqlite.db-wal
+TodoListAPI/TodoListAPI/Properties/PublishProfiles/MBTodoListAPI - Zip Deploy.pubxml.user
+TodoListAPI/TodoListAPI/Properties/ServiceDependencies/MBTodoListAPI - Zip Deploy/apis1.arm.json
+TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deploy.json.user
+TodoListAPI/TodoListAPI/Properties/PublishProfiles/MBTodoListAPI - Zip Deploy.pubxml.user
+TodoListAPI/TodoListAPI/Properties/ServiceDependencies/MBTodoListAPI - Zip Deploy/apis1.arm.json
+TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deploy.json.user

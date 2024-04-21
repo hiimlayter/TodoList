@@ -4,7 +4,9 @@ export const httpInterceptorInterceptor: HttpInterceptorFn = (req, next) => {
 
   var request = req.clone({
     withCredentials: true,
-    
+    setHeaders: {
+      'Allow-Control-Allow-Origin': 'https://mbtodolistapp.azurewebsites.net/',
+    }
     
   });
 
