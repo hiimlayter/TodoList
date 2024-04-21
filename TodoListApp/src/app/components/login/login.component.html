@@ -6,6 +6,7 @@
 			<input type="text" placeholder="Imie" [(ngModel)]="registerObj.FirstName" name="firstName" required/>
             <input type="text" placeholder="Nazwisko" [(ngModel)]="registerObj.LastName" name="lastName" required/>
 			<input type="email" placeholder="Email" [(ngModel)]="registerObj.Email" name="regEmail" required/>
+			<p style="margin: 0; padding: 0;">Hasło powinno składać się z przynajmniej 8 znaków i zawierać duże i małe litary, znaki specjalne oraz cyfry</p>
 			<input type="password" placeholder="Hasło" [(ngModel)]="registerObj.Password" name="regPassword" required/>
             <input type="password" placeholder="Powtórz hasło" [(ngModel)]="registerObj.ConfirmPassword" name="regRepPassword" required/>
 			<button (click)="Register()">Zarejestruj</button>
