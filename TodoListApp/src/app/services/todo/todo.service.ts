@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject, map, tap } from 'rxjs';
 import { Todo } from '../../app.component';
 
-const baseTodoUrl = 'http://mbtodolistapi.azurewebsites.net/api/todo/'
+const baseTodoUrl = 'https://localhost:7218/api/todo/'
 
 @Injectable({
   providedIn: 'root'

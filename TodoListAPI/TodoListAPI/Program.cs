@@ -27,7 +27,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         builder =>
         {
-            builder.WithOrigins("https://mbtodolistapp.azurewebsites.net")
+            builder.WithOrigins("http://localhost:4200")
             .AllowCredentials()
             .AllowAnyHeader()
             .WithMethods("GET", "POST", "PUT", "DELETE");

@@ -18,3 +18,10 @@ TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deplo
 TodoListAPI/TodoListAPI/Properties/PublishProfiles/MBTodoListAPI - Zip Deploy.pubxml.user
 TodoListAPI/TodoListAPI/Properties/ServiceDependencies/MBTodoListAPI - Zip Deploy/apis1.arm.json
 TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deploy.json.user
+TodoListAPI/TodoListAPI/Properties/PublishProfiles/MBTodoListAPI - Zip Deploy1.pubxml.user
+TodoListAPI/TodoListAPI/Properties/PublishProfiles/MBTodoListAPI - Zip Deploy1.pubxml
+TodoListAPI/TodoListAPI/Properties/ServiceDependencies/MBTodoListAPI - Zip Deploy1/apis1.arm.json
+TodoListAPI/TodoListAPI/Properties/ServiceDependencies/MBTodoListAPI - Zip Deploy1/profile.arm.json
+TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deploy1.json
+TodoListAPI/TodoListAPI/Properties/serviceDependencies.MBTodoListAPI - Zip Deploy1.json.user
+TodoListAPI/TodoListAPI/TodoListAPI.csproj.user
